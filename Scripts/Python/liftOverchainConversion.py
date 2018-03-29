@@ -1,4 +1,16 @@
 #! /usr/bin/env python
+#Used to convert UCSC based chromosome names to ENSEMBL ones.
+#Takes in entry the chain file and 2 reference files took from UCSC mysql database for each species. 
+#ex : mysql --user=genome --host=genome-mysql.cse.ucsc.edu -A -N -e "select * from chromAlias;" oviAri3 | grep "ensembl" > oviAri3.conversion
+
+#Then, convert the file so the column 1 is ENSEMBL form, and  column 2 is UCSC's: 
+#1       chr1
+#10      chr10
+#11      chr11
+#12      chr12
+
+#Reference 1 is the first species in the chain, reference 2 is the second species (or genome reference).
+#For this file : hg38ToBosTau8.over.chain, ref1=hg38, ref2=BosTau8
 
 import sys, getopt
 
