@@ -63,7 +63,7 @@ def main(argv):
             line_split[2] = chr_1
             line_split[7] = chr_2
             line_joined = ' ' .join(line_split)
-            fout.write(line_joined)
+            fout.write(line_joined + "\n")
          else:
             fout.write(line);
 
